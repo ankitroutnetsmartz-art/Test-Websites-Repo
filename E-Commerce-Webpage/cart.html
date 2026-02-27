@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-Commerce Store</title>
+    <title>Your Cart - My E-Commerce Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cart-page">
     <header>
         <h1>My E-Commerce Store</h1>
         <button id="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -22,21 +22,34 @@
     </header>
 
     <section class="hero">
-        <h2>Welcome to Our Store</h2>
-        <p>Discover amazing products at unbeatable prices.</p>
+        <h2>Your Shopping Cart</h2>
     </section>
 
-    <section id="shop" class="search">
-        <input type="text" id="search-input" placeholder="Search products...">
-    </section>
-
-    <section class="products" id="product-list">
-        <!-- products rendered by script.js -->
+    <section class="cart-content">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="cart-body">
+                <!-- filled by script -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            Total: <span id="cart-total">$0.00</span>
+        </div>
+        <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
     </section>
 
     <footer>
         <p>&copy; 2026 My E-Commerce Store. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
